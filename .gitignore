@@ -1,0 +1,54 @@
+# Virtual environment
+venv/
+env/
+.env/
+.venv/
+
+# Environment variables / API keys
+.env
+.env.*
+*.env
+secrets.json
+secrets.yaml
+secrets.yml
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.egg
+.eggs/
+
+# Model checkpoints and large binaries
+checkpoints/*.pt
+checkpoints/*.pth
+checkpoints/*.ckpt
+
+# Jupyter
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# PyTorch
+*.pt
+*.pth
+
+# Logs
+*.log
+logs/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo

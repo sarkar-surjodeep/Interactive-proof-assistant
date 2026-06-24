@@ -1,0 +1,261 @@
+{
+  "(R \u2192 R)": {
+    "formula": "(R \u2192 R)",
+    "proof_steps": [
+      "and_intro: added frozenset({And(left=Implies(antecedent=Atom(name='Q'), consequent=Atom(name='R')), right=And(left=Atom(name='P'), right=Atom(name='Q')))})",
+      "and_elim: added frozenset({Atom(name='Q'), Atom(name='P')})",
+      "modus_ponens: added frozenset({Atom(name='R')})",
+      "impl_intro: added frozenset({Implies(antecedent=Atom(name='R'), consequent=Atom(name='R'))})"
+    ],
+    "times_used": 18,
+    "episode_proved": 0
+  },
+  "(P \u2228 Q)": {
+    "formula": "(P \u2228 Q)",
+    "proof_steps": [
+      "or_intro: added frozenset({Or(left=Atom(name='P'), right=Atom(name='Q'))})"
+    ],
+    "times_used": 101,
+    "episode_proved": 1
+  },
+  "(P \u2227 R)": {
+    "formula": "(P \u2227 R)",
+    "proof_steps": [
+      "modus_ponens: added frozenset({Atom(name='R')})",
+      "and_intro: added frozenset({And(left=Atom(name='P'), right=Atom(name='R'))})"
+    ],
+    "times_used": 0,
+    "episode_proved": 2
+  },
+  "(Q \u2192 Q)": {
+    "formula": "(Q \u2192 Q)",
+    "proof_steps": [
+      "impl_intro: added frozenset({Implies(antecedent=Atom(name='Q'), consequent=Atom(name='Q'))})"
+    ],
+    "times_used": 0,
+    "episode_proved": 5
+  },
+  "Q": {
+    "formula": "Q",
+    "proof_steps": [
+      "and_elim: added frozenset({Atom(name='R')})",
+      "or_elim: added frozenset({Atom(name='Q')})"
+    ],
+    "times_used": 0,
+    "episode_proved": 9
+  },
+  "(P \u2192 (P \u2227 R))": {
+    "formula": "(P \u2192 (P \u2227 R))",
+    "proof_steps": [
+      "and_intro: added frozenset({And(left=Implies(antecedent=Atom(name='Q'), consequent=Atom(name='R')), right=Or(left=Atom(name='P'), right=Atom(name='Q')))})",
+      "impl_intro: added frozenset({Implies(antecedent=Atom(name='P'), consequent=And(left=Atom(name='P'), right=Atom(name='R')))})"
+    ],
+    "times_used": 0,
+    "episode_proved": 14
+  },
+  "(P \u2192 R)": {
+    "formula": "(P \u2192 R)",
+    "proof_steps": [
+      "and_elim: added frozenset({Atom(name='R'), Atom(name='P')})",
+      "hyp_syll: added frozenset({Implies(antecedent=Atom(name='P'), consequent=Atom(name='R'))})"
+    ],
+    "times_used": 0,
+    "episode_proved": 15
+  },
+  "(P \u2192 P)": {
+    "formula": "(P \u2192 P)",
+    "proof_steps": [
+      "and_elim: added frozenset({Atom(name='P')})",
+      "modus_ponens: added frozenset({Atom(name='R')})",
+      "impl_intro: added frozenset({Implies(antecedent=Atom(name='P'), consequent=Atom(name='P'))})"
+    ],
+    "times_used": 0,
+    "episode_proved": 21
+  },
+  "R": {
+    "formula": "R",
+    "proof_steps": [
+      "and_elim: added frozenset({Atom(name='R'), Atom(name='P')})"
+    ],
+    "times_used": 0,
+    "episode_proved": 27
+  },
+  "(P \u2227 Q)": {
+    "formula": "(P \u2227 Q)",
+    "proof_steps": [
+      "and_intro: added frozenset({And(left=Atom(name='P'), right=Atom(name='Q'))})"
+    ],
+    "times_used": 0,
+    "episode_proved": 29
+  },
+  "(P \u2192 (P \u2192 R))": {
+    "formula": "(P \u2192 (P \u2192 R))",
+    "proof_steps": [
+      "impl_intro: added frozenset({Implies(antecedent=Atom(name='P'), consequent=Implies(antecedent=Atom(name='P'), consequent=Atom(name='R')))})"
+    ],
+    "times_used": 0,
+    "episode_proved": 33
+  },
+  "(P \u2192 (P \u2228 Q))": {
+    "formula": "(P \u2192 (P \u2228 Q))",
+    "proof_steps": [
+      "impl_intro: added frozenset({Implies(antecedent=Atom(name='P'), consequent=Or(left=Atom(name='P'), right=Atom(name='Q')))})"
+    ],
+    "times_used": 0,
+    "episode_proved": 35
+  },
+  "\u00ac(\u00acP)": {
+    "formula": "\u00ac(\u00acP)",
+    "proof_steps": [
+      "contradiction: added frozenset({Bot(), Not(operand=Not(operand=Atom(name='P')))})"
+    ],
+    "times_used": 0,
+    "episode_proved": 40
+  },
+  "P": {
+    "formula": "P",
+    "proof_steps": [
+      "and_intro: added frozenset({And(left=Implies(antecedent=Atom(name='P'), consequent=Or(left=Atom(name='P'), right=Atom(name='Q'))), right=Implies(antecedent=Atom(name='P'), consequent=Atom(name='R')))})",
+      "and_intro: added frozenset({And(left=Implies(antecedent=Atom(name='P'), consequent=Or(left=Atom(name='P'), right=Atom(name='Q'))), right=And(left=Atom(name='P'), right=Atom(name='R')))})",
+      "and_intro: added frozenset({And(left=Implies(antecedent=Atom(name='P'), consequent=Or(left=Atom(name='P'), right=Atom(name='Q'))), right=Implies(antecedent=Atom(name='P'), consequent=Atom(name='P')))})",
+      "and_elim: added frozenset({Atom(name='P')})"
+    ],
+    "times_used": 0,
+    "episode_proved": 68
+  },
+  "\u00acP": {
+    "formula": "\u00acP",
+    "proof_steps": [
+      "and_intro: added frozenset({And(left=Implies(antecedent=Atom(name='P'), consequent=Or(left=Atom(name='P'), right=Atom(name='Q'))), right=And(left=Atom(name='P'), right=Atom(name='R')))})",
+      "contradiction: added frozenset({Bot(), Not(operand=Atom(name='P'))})"
+    ],
+    "times_used": 0,
+    "episode_proved": 99
+  },
+  "\u00ac((P \u2228 Q))": {
+    "formula": "\u00ac((P \u2228 Q))",
+    "proof_steps": [
+      "contradiction: added frozenset({Bot(), Not(operand=Or(left=Atom(name='P'), right=Atom(name='Q')))})"
+    ],
+    "times_used": 0,
+    "episode_proved": 103
+  },
+  "(Q \u2192 (Q \u2227 R))": {
+    "formula": "(Q \u2192 (Q \u2227 R))",
+    "proof_steps": [
+      "contradiction: added frozenset({Bot(), Implies(antecedent=Atom(name='Q'), consequent=And(left=Atom(name='Q'), right=Atom(name='R')))})"
+    ],
+    "times_used": 0,
+    "episode_proved": 105
+  },
+  "\u00ac((P \u2192 R))": {
+    "formula": "\u00ac((P \u2192 R))",
+    "proof_steps": [
+      "modus_ponens: added frozenset({And(left=Atom(name='Q'), right=Atom(name='R'))})",
+      "hyp_syll: added frozenset({Implies(antecedent=Atom(name='P'), consequent=And(left=Atom(name='Q'), right=Atom(name='R')))})",
+      "contradiction: added frozenset({Bot(), Not(operand=Implies(antecedent=Atom(name='P'), consequent=Atom(name='R')))})"
+    ],
+    "times_used": 0,
+    "episode_proved": 108
+  },
+  "\u00acR": {
+    "formula": "\u00acR",
+    "proof_steps": [
+      "contradiction: added frozenset({Not(operand=Atom(name='R')), Bot()})"
+    ],
+    "times_used": 0,
+    "episode_proved": 111
+  },
+  "\u00acQ": {
+    "formula": "\u00acQ",
+    "proof_steps": [
+      "contradiction: added frozenset({Not(operand=Atom(name='Q')), Bot()})"
+    ],
+    "times_used": 0,
+    "episode_proved": 119
+  },
+  "(P \u2192 \u00acP)": {
+    "formula": "(P \u2192 \u00acP)",
+    "proof_steps": [
+      "hyp_syll: added frozenset({Implies(antecedent=Atom(name='P'), consequent=And(left=Atom(name='Q'), right=Atom(name='R')))})",
+      "impl_intro: added frozenset({Implies(antecedent=Atom(name='P'), consequent=Not(operand=Atom(name='P')))})"
+    ],
+    "times_used": 0,
+    "episode_proved": 121
+  },
+  "(Q \u2192 (Q \u2227 S))": {
+    "formula": "(Q \u2192 (Q \u2227 S))",
+    "proof_steps": [
+      "hyp_syll: added frozenset({Implies(antecedent=Atom(name='P'), consequent=Atom(name='S'))})",
+      "hyp_syll: added frozenset({Implies(antecedent=Atom(name='P'), consequent=And(left=Atom(name='Q'), right=Atom(name='R')))})",
+      "and_intro: added frozenset({And(left=Not(operand=Atom(name='R')), right=Not(operand=Atom(name='P')))})",
+      "and_intro: added frozenset({And(left=Not(operand=Atom(name='R')), right=Implies(antecedent=Atom(name='P'), consequent=Or(left=Atom(name='P'), right=Atom(name='Q'))))})",
+      "contradiction: added frozenset({Implies(antecedent=Atom(name='Q'), consequent=And(left=Atom(name='Q'), right=Atom(name='S'))), Bot()})"
+    ],
+    "times_used": 0,
+    "episode_proved": 122
+  },
+  "(Q \u2227 S)": {
+    "formula": "(Q \u2227 S)",
+    "proof_steps": [
+      "modus_ponens: added frozenset({And(left=Atom(name='Q'), right=Atom(name='S'))})"
+    ],
+    "times_used": 0,
+    "episode_proved": 126
+  },
+  "(Q \u2227 R)": {
+    "formula": "(Q \u2227 R)",
+    "proof_steps": [
+      "hyp_syll: added frozenset({Implies(antecedent=Atom(name='P'), consequent=And(left=Atom(name='Q'), right=Atom(name='R')))})",
+      "hyp_syll: added frozenset({Implies(antecedent=Atom(name='P'), consequent=And(left=Atom(name='Q'), right=Atom(name='S')))})",
+      "and_intro: added frozenset({And(left=Atom(name='Q'), right=Atom(name='R'))})"
+    ],
+    "times_used": 0,
+    "episode_proved": 132
+  },
+  "\u00ac((P \u2227 Q))": {
+    "formula": "\u00ac((P \u2227 Q))",
+    "proof_steps": [
+      "contradiction: added frozenset({Bot(), Not(operand=And(left=Atom(name='P'), right=Atom(name='Q')))})"
+    ],
+    "times_used": 0,
+    "episode_proved": 139
+  },
+  "\u00ac((Q \u2227 S))": {
+    "formula": "\u00ac((Q \u2227 S))",
+    "proof_steps": [
+      "hyp_syll: added frozenset({Implies(antecedent=Atom(name='P'), consequent=Atom(name='S'))})",
+      "and_elim: added frozenset({Atom(name='S')})",
+      "contradiction: added frozenset({Not(operand=And(left=Atom(name='Q'), right=Atom(name='S'))), Bot()})"
+    ],
+    "times_used": 0,
+    "episode_proved": 142
+  },
+  "\u00ac((P \u2227 R))": {
+    "formula": "\u00ac((P \u2227 R))",
+    "proof_steps": [
+      "and_elim: added frozenset({Atom(name='S')})",
+      "and_intro: added frozenset({And(left=Implies(antecedent=Atom(name='R'), consequent=Atom(name='R')), right=Not(operand=Or(left=Atom(name='P'), right=Atom(name='Q'))))})",
+      "contradiction: added frozenset({Bot(), Not(operand=And(left=Atom(name='P'), right=Atom(name='R')))})"
+    ],
+    "times_used": 0,
+    "episode_proved": 5
+  },
+  "(P \u2192 (P \u2227 Q))": {
+    "formula": "(P \u2192 (P \u2227 Q))",
+    "proof_steps": [
+      "and_elim: added frozenset({Atom(name='S')})",
+      "contradiction: added frozenset({Implies(antecedent=Atom(name='P'), consequent=And(left=Atom(name='P'), right=Atom(name='Q'))), Bot()})"
+    ],
+    "times_used": 0,
+    "episode_proved": 10
+  },
+  "\u00ac((Q \u2227 R))": {
+    "formula": "\u00ac((Q \u2227 R))",
+    "proof_steps": [
+      "contradiction: added frozenset({Bot(), Not(operand=And(left=Atom(name='Q'), right=Atom(name='R')))})"
+    ],
+    "times_used": 0,
+    "episode_proved": 156
+  }
+}
