@@ -17,7 +17,7 @@ So this system has two agents:
 
 **The Worker** is the doer. It takes whatever subgoal the Manager handed it and chips away at it one inference rule at a time (modus ponens, and-elimination, and so on) until it either reaches the subgoal or runs out of steps.
 
-Every time the Worker proves a lemma, that lemma gets saved in a **library**. In later proofs, the saved lemmas are available to be reused. Over many attempts the Manager starts to learn which lemmas are worth proving and reusing, which is where the "generating useful lemmas" behaviour comes from. This reuse-and-grow idea is borrowed directly from LEGO-Prover (Wang et al., 2023), which does the same thing at a much larger scale on real olympiad problems.
+Every time the Worker proves a lemma, that lemma gets saved in a **library**. In later proofs, the saved lemmas are available to be reused. Over many attempts the Manager starts to learn which lemmas are worth proving and reusing, which is where the "generating useful lemmas" behaviour comes from. This reuse-and-grow idea is borrowed directly from LEGO-Prover (Wang et al), which does the same thing at a much larger scale on real olympiad problems.
 
 
 ## How a single proof runs
