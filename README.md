@@ -22,7 +22,7 @@ Every time the Worker proves a lemma, that lemma gets saved in a **library**. In
 
 ## How a single proof runs
 
-1. You give it a theorem: some premises and a goal to prove.
+1. Provide the system with a theorem: some premises and a goal to prove.
 2. The Manager looks at the situation and picks a strategy. If that strategy is "prove a helper lemma first," the lemma becomes the Worker's new target.
 3. The Worker applies inference rules step by step toward that target.
 4. If the Worker succeeds, the lemma is added to the library and the Manager gets credit. If it fails or times out, the Manager picks a different strategy and tries again.
@@ -37,7 +37,7 @@ The rewards are deliberately simple. The Worker gets a small reward each time it
 
 **The environment.** This wraps the logic engine in the standard Gymnasium interface used for reinforcement learning. It turns a proof state into a fixed-size vector of numbers the agents can read, and it hands out the rewards described above.
 
-**The two agents.** Both are small neural networks trained with DQN, a standard value-based RL algorithm. They're intentionally tiny, because propositional logic has a small enough search space that nothing bigger is needed.
+**The two agents.** Both are small neural networks trained with Deep Q-Network (DQN), a standard value-based RL algorithm. They're intentionally tiny, because propositional logic has a small enough search space that nothing bigger is needed.
 
 **The curriculum.** Twenty theorems arranged from easy to hard, in four levels. Level 1 is a single rule (basic modus ponens). Level 4 needs the agent to decompose the problem into several lemmas. Training starts on the easy ones and widens to the harder ones as the agent improves, which is a standard curriculum-learning setup.
 
@@ -99,14 +99,14 @@ python tests/test_core.py
 
 The system is built around a question that keeps coming up in automated reasoning: can HRL automate proofs and generate interesting conjectures and lemmas? Each design choice maps onto one piece of that question.
 
-- **Decomposing a proof into subgoals.** The Manager setting lemma subgoals mirrors how a real prover would break a hard theorem into pieces. This subgoal-then-prove structure is the same one used by Draft, Sketch, and Prove (Jiang et al., 2023), where an informal sketch is turned into formal sub-problems.
+- **Decomposing a proof into subgoals.** The Manager setting lemma subgoals mirrors how a real prover would break a hard theorem into pieces. This subgoal-then-prove structure is the same one used by Draft, Sketch, and Prove (Jiang et al), where an informal sketch is turned into formal sub-problems.
 - **Working at two timescales.** The Manager plans over strategies while the Worker acts over individual steps. This is the options framework from Sutton, Precup, and Singh (1999), the foundational formulation of temporal abstraction in RL, and it's what lets the agent cope with the sparse, far-off reward that defeats a flat agent.
-- **A library that grows.** Saving and reusing lemmas is the LEGO-Prover idea (Wang et al., 2023). It's also what makes lemma generation more than a gimmick: a lemma is "useful" if it gets reused, which gives a concrete, measurable signal.
+- **A library that grows.** Saving and reusing lemmas is the LEGO-Prover idea (Wang et al). It's also what makes lemma generation more than a gimmick: a lemma is "useful" if it gets reused, which gives a concrete, measurable signal.
 
 It's just as important to be clear about what this is *not*, because that's where the interesting problems actually live:
 
 - It runs on a toy logic, not a real proof assistant. A serious version would sit on top of Lean 4, Coq, or Isabelle, where the proof states are vastly richer.
-- The Worker learns from scratch. A real system would start from a pretrained tactic model rather than a small network, the way HyperTree Proof Search (Lample et al., 2022) pairs a transformer with its search.
+- The Worker learns from scratch. A real system would start from a pretrained tactic model rather than a small network, the way HyperTree Proof Search (Lample et al) pairs a transformer with its search.
 - The hardest open problem is barely touched here: what makes a conjecture *interesting*? Rewarding a lemma for being provable and for being reused is tractable, but mathematical interestingness is far subtler, and an agent rewarded only for reuse will happily churn out true-but-boring lemmas. Pinning down a better signal is one of the genuinely hard parts of this whole area.
 
 
