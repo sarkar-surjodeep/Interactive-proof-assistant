@@ -131,10 +131,10 @@ hrl_prover/
 
 ## References
 
-Richard S. Sutton, Doina Precup, and Satinder Singh (1999). Between MDPs and Semi-MDPs: A Framework for Temporal Abstraction in Reinforcement Learning. *Artificial Intelligence*, 112(1–2), 181–211. https://doi.org/10.1016/S0004-3702(99)00052-1
+[1] Sutton, Richard S., Doina Precup, and Satinder Singh. "Between MDPs and semi-MDPs: A framework for temporal abstraction in reinforcement learning." Artificial intelligence 112.1-2 (1999): 181-211.
 
-Guillaume Lample, Timothée Lacroix, Marie-Anne Lachaux, Aurélien Rodriguez, Amaury Hayat, Thibaut Lavril, Gabriel Ebner, and Xavier Martinet (2022). HyperTree Proof Search for Neural Theorem Proving. *Advances in Neural Information Processing Systems (NeurIPS) 35*. arXiv:2205.11491
+[2] Lample, Guillaume, et al. "Hypertree proof search for neural theorem proving." Advances in neural information processing systems 35 (2022): 26337-26349.
 
-Albert Q. Jiang, Sean Welleck, Jin Peng Zhou, Wenda Li, Jiacheng Liu, Mateja Jamnik, Timothée Lacroix, Yuhuai Wu, and Guillaume Lample (2023). Draft, Sketch, and Prove: Guiding Formal Theorem Provers with Informal Proofs. *International Conference on Learning Representations (ICLR)*. arXiv:2210.12283
+[3] Jiang, Albert Q., et al. "Draft, sketch, and prove: Guiding formal theorem provers with informal proofs." arXiv preprint arXiv:2210.12283 (2022).
 
-Haiming Wang, Huajian Xin, Chuanyang Zheng, Lin Li, Zhengying Liu, Qingxing Cao, Yinya Huang, Jing Xiong, Han Shi, Enze Xie, Jian Yin, Zhenguo Li, Heng Liao, and Xiaodan Liang (2023). LEGO-Prover: Neural Theorem Proving with Growing Libraries. *International Conference on Learning Representations (ICLR) 2024*. arXiv:2310.00656
+[4] Wang, Haiming, et al. "Lego-prover: Neural theorem proving with growing libraries." International Conference on Learning Representations. Vol. 2024. 2024.
